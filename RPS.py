@@ -1,6 +1,6 @@
 import random
 
-validOptions = ["rock", "paper", "scissors"]
+validOptions = ["rock", "paper", "scissors", "spock", "lizard"]
 
 def isUserInputValid(userChoice):
     if userChoice in validOptions:
@@ -25,14 +25,14 @@ while (userScore != 3 and computerScore != 3):
 
     print("The computer chose " + computersChoice)
     
-    if d == 1:
+    if d == 0:
+        print ("A draw!")
+    elif d%2 == 1:
         print ("You win!")
         userScore+=1
-    elif d == 2:
+    else:
         print("Computer wins!")
         computerScore+=1
-    else:
-        print ("A draw!")
 
 print("User score: " + str(userScore))
 print("Computer score: " + str(computerScore))
