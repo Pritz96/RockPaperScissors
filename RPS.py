@@ -1,10 +1,12 @@
 import random
 
+validOptions = ["rock", "paper", "scissors"]
+
 def isUserInputValid(userChoice):
-    if(userChoice== "rock" or userChoice=="paper" or userChoice=="scissors"):
-        return "true"
+    if userChoice in validOptions:
+        return True
     else:
-        return "false"
+        return False
 
 userScore=0
 computerScore=0
@@ -12,8 +14,8 @@ while (userScore != 3 and computerScore != 3):
     print("User score: " + str(userScore))
     print("Computer score: " + str(computerScore))
     userInput = ""
-    while (isUserInputValid(userInput)=="false"):
-        userInput = input("Type 'rock', 'paper' or 'scissors':")
+    while (not isUserInputValid(userInput)):
+        userInput = input("Type one of the following: '" + "', '".join(validOptions) + "': ")
         
     randomNumber = random.randrange(0, 2)
 
