@@ -10,8 +10,7 @@ def isUserInputValid(userChoice):
 
 userScore, computerScore = 0, 0
 while (userScore != 3 and computerScore != 3):
-    print("User score: " + str(userScore))
-    print("Computer score: " + str(computerScore))
+    print("User score: " + str(userScore) + " | | " + "Computer score: " + str(computerScore))
     userInput = ""
     while (not isUserInputValid(userInput)):
         userInput = input("Type one of the following: '" + "', '".join(validOptions) + "': ")
@@ -36,8 +35,9 @@ while (userScore != 3 and computerScore != 3):
 
 print("User score: " + str(userScore))
 print("Computer score: " + str(computerScore))
+
 if(userScore == 3):
-    print("USER WINS 3 GAMES")
+    print("USER WINS 3 GAMES !!!")
 if(computerScore==3):
-    print("COMPUTER WINS 3 GAMES")
+    print("COMPUTER WINS 3 GAMES !!!")
 
